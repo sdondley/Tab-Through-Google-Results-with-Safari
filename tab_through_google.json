@@ -1,0 +1,63 @@
+{
+   "rules" : [
+      {
+         "description" : "ctrl-j to tab to next google result",
+         "manipulators" : [
+            {
+               "type" : "basic",
+               "from" : {
+                  "key_code" : "j",
+                  "modifiers" : {
+                     "mandatory" : [
+                        "control"
+                     ]
+                  }
+               },
+               "to" : [
+                  {
+                     "shell_command" : "zsh -c '~/bin/tab_to_result.osa down'"
+                  }
+               ],
+               "conditions": [
+                   {
+                       "type" : "frontmost_application_if",
+                       "bundle_identifiers" : [
+                           "^com\\.apple\\.Safari"
+                       ]
+                   }
+               ]
+            }
+         ]
+      },
+      {
+         "description" : "ctrl-k to tab to previous google result",
+         "manipulators" : [
+            {
+               "type" : "basic",
+               "from" : {
+                  "key_code" : "k",
+                  "modifiers" : {
+                     "mandatory" : [
+                        "control"
+                     ]
+                  }
+               },
+               "to" : [
+                  {
+                     "shell_command" : "zsh -c '~/bin/tab_to_result.osa up'"
+                  }
+               ],
+               "conditions": [
+                   {
+                       "type" : "frontmost_application_if",
+                       "bundle_identifiers" : [
+                           "^com\\.apple\\.Safari"
+                       ]
+                   }
+               ]
+            }
+         ]
+      }
+   ],
+   "title" : "Tab to next Google result"
+}

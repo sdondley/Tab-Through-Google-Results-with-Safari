@@ -1,0 +1,43 @@
+#!/usr/bin/osascript
+
+on run argv
+set op to argv
+
+global isTag
+tell application "Safari" to activate
+tell application "System Events"
+
+       # detect if page is newly opened, tab once if so
+       tell application "Safari"
+           set curEl to (do JavaScript "el=document.activeElement;tag=el.tagName;" in current tab of first window)
+       end tell
+       if ((curEl as string) is equal to "BODY") then keystroke tab 
+
+       repeat 50 times # set a limit to prevent runaway
+           # do the up/down tab
+           if ((op as string) is equal to "up") then
+             keystroke tab using shift down
+           else
+             keystroke tab
+           end if
+           delay .003 # wait for tab to happen
+
+           # check the innerHTML to see if we are a main result link
+           tell application "Safari"
+               set isTag to (do JavaScript "el=document.activeElement;tag=el.innerHTML;" in current tab of first window)
+               # uncomment next line to debug
+               #display dialog isTag
+           end tell
+
+           # Found link. Stop.
+           if isTag begins with "<br><h3 class" then exit repeat
+
+       end repeat
+
+       # scroll the screen to the element
+       tell application "Safari"
+           do JavaScript "el=document.activeElement;el.scrollIntoView({block: 'center'});" in current tab of first window
+       end tell
+
+end tell
+end run
