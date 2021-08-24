@@ -4,7 +4,7 @@
 
 This AppleScript scans and sends keystrokes to an open Safari browser window to allow you to easily tab between the previous and next links on the search results web page returned by Google's search engine.
 
-While this script can work alone from the command line, it's best used with a hot key application to execute the script. For example, you can trigger the script with a simple Autmator service (or "Quick Action," as Apple refers to them now). For the impatient, a third party hot key application like Karabiner-Elements will be more responsive to your keystrokes than Automator. Since I use Karabiner-Elements, I have provided the JSON file you can use to tab up/down with the `CTRL-J` (next link) and `CTRL-K` (previous link). The JSON file can be downloaded from this repository.
+While this script can work alone from the command line, it's best used with a hot key application to executeit. For example, you can trigger the script with a simple Autmator service (or "Quick Action," as Apple refers to them now). For the impatient, a third party hot key application like Karabiner-Elements will be more responsive to your keystrokes than Automator. Since I use Karabiner-Elements, I have provided the JSON file you can use to tab up/down with the `CTRL-J` (next link) and `CTRL-K` (previous link). The JSON file can be downloaded from this repository.
 
 ## Motivation
 
