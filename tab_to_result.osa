@@ -4,7 +4,12 @@ on run argv
 set op to argv
 
 global isTag
-tell application "Safari" to activate
+tell application "Safari"
+  activate
+  # bail if we aren't on a google search results page
+  set my_url to url of document 1
+  if (my_url as string does not begin with "https://www.google.com/search") then return
+end tell
 tell application "System Events"
 
        # detect if page is newly opened, tab once if so
