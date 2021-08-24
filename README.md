@@ -67,7 +67,7 @@ Consult the official [Karabiner-Elements website](https://karabiner-elements.pqr
 
 The AppleScript has comments to help you see how it works in more detail. But basically, it just mindlessly hits the tab key and uses a dash of JavaScript to look at the `InnerHTML` property of the current active element to see if it's on something that looks like a search result. If it is, then it stops hitting the tab key.
 
-There are most certainly going to be better ways to do this than repeatedly hitting tab but that would entail more coding thann I'm willing to put the time and effor into. This works good enough for me. I'm not a seasoned JavaScript/AppleScript developer so feel free to submit a patch to make the script a little more sensible.
+There are most certainly going to be better ways to do this than repeatedly hitting tab but that would entail more coding thann I'm willing to put the time and effort into. This works good enough for me. I'm not a seasoned JavaScript/AppleScript developer so feel free to submit a patch to make the script a little more sensible.
 
 ## Known Issues
 
