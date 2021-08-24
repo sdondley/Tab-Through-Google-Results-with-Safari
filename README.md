@@ -43,13 +43,13 @@ When configuring your hot key app, the "next" hot key, which tabs to the next Go
 
 Here is some basic guidance for getting Automator "Quick Actions" set up to work with the AppleScript:
 
-Official documentation: https://support.apple.com/guide/automator/use-quick-action-workflows-aut73234890a/mac
+[Official "Quick Action" documentation](https://support.apple.com/guide/automator/use-quick-action-workflows-aut73234890a/mac)
 
 It's a good idea to set the "Quick Action" works with just Safari to prevent other applications to hot keys meant for Safari.
 
 You will need to create two actions: one that executes the "previous" hot key for moving up the page to the next result and one that triggers the "next" hot key for going down.
 
-Once your "Quick Actions" are set up, you need to connect them to a keyboard shortcut. Here's a helpful StacOverflow post you may find useful: https://apple.stackexchange.com/questions/175215/how-do-i-assign-a-keyboard-shortcut-to-an-applescript-i-wrote. If you have a trouch bar, you can add the shortuct there as well. Consult Google for further details.
+Once your "Quick Actions" are set up, you need to connect them to a keyboard shortcut. Here's a helpful [StacOverflow post you may find useful.](https://apple.stackexchange.com/questions/175215/how-do-i-assign-a-keyboard-shortcut-to-an-applescript-i-wrote). If you have a touch bar, you can add the shortuct there as well. Consult Google for further details.
 
 #### Karabiner-Elements
 
@@ -59,7 +59,7 @@ Here are the basic steps to getting this working with Karabiner-Elements:
 2. Place the file in the proper configuration directory for Karabiner-Elements
 3. Install the hot keys into Karabiner elements
 
-Consult the official Karabiner-Elements website for more details: karabiner elements: https://karabiner-elements.pqrs.org
+Consult the official [Karabiner-Elements website](https://karabiner-elements.pqrs.org).
 
 ## How It Works
 
