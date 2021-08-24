@@ -49,7 +49,9 @@ It's a good idea to set the "Quick Action" works with just Safari to prevent oth
 
 You will need to create two actions: one that executes the "previous" hot key for moving up the page to the next result and one that triggers the "next" hot key for going down.
 
-Once your "Quick Actions" are set up, you need to connect them to a keyboard shortcut. Here's a helpful [StacOverflow post you may find useful.](https://apple.stackexchange.com/questions/175215/how-do-i-assign-a-keyboard-shortcut-to-an-applescript-i-wrote). If you have a touch bar, you can add the shortuct there as well. Consult Google for further details.
+Once your "Quick Actions" are set up, you need to connect them to a keyboard shortcut. Here's a helpful [StacOverflow post you may find useful](https://apple.stackexchange.com/questions/175215/how-do-i-assign-a-keyboard-shortcut-to-an-applescript-i-wrote). If you have a touch bar, you can add the shortuct there as well. Consult Google for further details.
+
+**CAUTION** If the hot key combiation is the control key followed by another single key, CTRL-D for example, you will run into a problem with the script causing the Safari to cycle through open tabs instead of links on the page. See the **Problems?** section below for options around this.
 
 #### Karabiner-Elements
 
@@ -67,8 +69,24 @@ The AppleScript has comments to help you see how it works in more detail. But ba
 
 There are most certainly going to be better ways to do this than repeatedly hitting tab but that would entail more coding thann I'm willing to put the time and effor into. This works good enough for me. I'm not a seasoned JavaScript/AppleScript developer so feel free to submit a patch to make the script a little more sensible.
 
+## Known Issues
+
+### Links get skipped
+
+See the **Problems?** section below for a fix.
+
+### Hot keys working on other sites besides Google
+
+Will be fixed soon. In the meantime, be careful not to hit the hotkeys when not on a Google search result page unless you want to tab down 50 links automatically.
+
 
 ## Problems?
+
+### With Automator, the script tabs through the open tabs if I keep the `control` key pressed
+
+This happens when you set the script to be activated by pressing the `control` key along with a single other key.
+
+The easiest fix is to change the hot key so it uses a different modifer key like `command` or uses multiple modifier keys, command-control. Another option is to change the defaul hot keys in Safari so control-tab and control-shift-tab does not cycle through your open tabs. Or you can just remmeber to release the control key after each activation, but this is not ideal.
 
 ### The script is skipping over links
 
