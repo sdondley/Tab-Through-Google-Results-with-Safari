@@ -75,11 +75,6 @@ There are most certainly going to be better ways to do this than repeatedly hitt
 
 See the **Problems?** section below for a fix.
 
-### Hot keys working on other sites besides Google
-
-Will be fixed soon. In the meantime, be careful not to hit the hotkeys when not on a Google search result page unless you want to tab down 50 links automatically.
-
-
 ## Problems?
 
 ### With Automator, the script tabs through the open tabs if I keep the `control` key pressed
