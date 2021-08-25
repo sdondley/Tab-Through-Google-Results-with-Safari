@@ -3,13 +3,11 @@
 on run argv
 set op to argv
 
-global isTag
+# bail if we aren't on a google search results page
 tell application "Safari"
-  activate
-  # bail if we aren't on a google search results page
-  set my_url to url of document 1
-  if (my_url as string does not begin with "https://www.google.com/search") then return
+  if (url of document 1 as string does not begin with "https://www.google.com/search") then return
 end tell
+
 tell application "System Events"
 
        repeat 50 times # set a limit to prevent runaway
@@ -19,21 +17,23 @@ tell application "System Events"
            else
              keystroke tab
            end if
-           delay .003 # wait for tab to happen
+
+            # wait just long enough for tab to occur to prevent skipping linsk
+           delay .003 # change this value as necessary
 
            # check the innerHTML to see if we are a main result link
            tell application "Safari"
                set isTag to (do JavaScript "el=document.activeElement;tag=el.innerHTML;" in current tab of first window)
                # uncomment next line to debug
-               #display dialog isTag
+               # display dialog isTag
            end tell
 
-           # Found link. Stop.
+           # Found link. Stop tabbing.
            if isTag begins with "<br><h3 class" then exit repeat
 
        end repeat
 
-       # scroll the screen to the element
+       # center the active element on the page
        tell application "Safari"
            do JavaScript "el=document.activeElement;el.scrollIntoView({block: 'center'});" in current tab of first window
        end tell
