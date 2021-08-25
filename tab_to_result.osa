@@ -12,12 +12,6 @@ tell application "Safari"
 end tell
 tell application "System Events"
 
-       # detect if page is newly opened, tab once if so
-       tell application "Safari"
-           set curEl to (do JavaScript "el=document.activeElement;tag=el.tagName;" in current tab of first window)
-       end tell
-       if ((curEl as string) is equal to "BODY") then keystroke tab 
-
        repeat 50 times # set a limit to prevent runaway
            # do the up/down tab
            if ((op as string) is equal to "up") then
