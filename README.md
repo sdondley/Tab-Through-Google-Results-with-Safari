@@ -53,7 +53,7 @@ You will need to create two actions: one that executes the "previous" hot key fo
 
 Once your "Quick Actions" are set up, you need to connect them to a keyboard shortcut. Here's a helpful [StackOverflow post you may find useful](https://apple.stackexchange.com/questions/175215/how-do-i-assign-a-keyboard-shortcut-to-an-applescript-i-wrote). If you have a touch bar, you can add the shortuct there as well. Consult Google for further details.
 
-**CAUTION** If the hot key combiation is the control key followed by another single key, CTRL-D for example, you will run into a problem with the script causing the Safari to cycle through open tabs instead of links on the page. See the **Problems?** section below for options to work around this.
+**CAUTION** If the hot key combiation is the control key followed by another single key, CTRL-D for example, you will likely run into a problem with the script causing the Safari to cycle through open tabs instead of links on the page. See the **Problems?** section below for options to work around this.
 
 #### Karabiner-Elements
 
