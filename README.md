@@ -20,15 +20,16 @@ Below are the basic steps for installing and using the script and assumes you ha
 1. Download the `tab_to_result.osa` AppleScript from this repository
 2. Add the AppleScript to a directory in your shell's $PATH
 3. Set permissions to make the script executable
-4. Configure your third party app to configure your chosen hot keys to trigger the script
+4. Follow the instructions below in the "Testing the script" section below
+5. Configure your third party app to configure your chosen hot keys to trigger the script
 
-### Test the app
+### Testing the script
 
-Once installed, you can test the app by opening a Google search results page in Safari. Then, from a terminal window, navigate to the directory containing the script and run:
+Before configuring your hotkey application, you should test the script to make sure it works by opening a Google search results page in Safari. Then, from a terminal window, navigate to the directory containing the script and run:
 
 `./tab_to_result.osa`
 
-Safari should activate and you should see the tab quickly move to the first search result on the page. Execute the script once each time you want to move to the next tab.
+Safari should activate and then tab move quickly to the first search result on the page. Execute the script once each time you want to move to the next tab.
 
 To test moving up to the previous link, run:
 
@@ -50,7 +51,7 @@ It's a good idea to set the "Quick Action" works with just Safari to prevent oth
 
 You will need to create two actions: one that executes the "previous" hot key for moving up the page to the next result and one that triggers the "next" hot key for going down.
 
-Once your "Quick Actions" are set up, you need to connect them to a keyboard shortcut. Here's a helpful [StacOverflow post you may find useful](https://apple.stackexchange.com/questions/175215/how-do-i-assign-a-keyboard-shortcut-to-an-applescript-i-wrote). If you have a touch bar, you can add the shortuct there as well. Consult Google for further details.
+Once your "Quick Actions" are set up, you need to connect them to a keyboard shortcut. Here's a helpful [StackOverflow post you may find useful](https://apple.stackexchange.com/questions/175215/how-do-i-assign-a-keyboard-shortcut-to-an-applescript-i-wrote). If you have a touch bar, you can add the shortuct there as well. Consult Google for further details.
 
 **CAUTION** If the hot key combiation is the control key followed by another single key, CTRL-D for example, you will run into a problem with the script causing the Safari to cycle through open tabs instead of links on the page. See the **Problems?** section below for options to work around this.
 
@@ -97,5 +98,3 @@ Sorry, I am unable help you figure out the particulars of your hot key applicati
 ### I installed the script but nothing happens when I run it from the command line
 
 First, make sure you are on a Google search result page. Then see step 0 of the installation steps. If it still fails, open up and issue and report any errors you might be getting.
-
-
