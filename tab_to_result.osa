@@ -5,6 +5,7 @@ set op to argv
 
 # bail if we aren't on a google search results page
 tell application "Safari"
+  activate
   if (url of document 1 as string does not begin with "https://www.google.com/search") then return
 end tell
 
